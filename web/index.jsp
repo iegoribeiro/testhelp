@@ -12,7 +12,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Pagina Principal</title>
+        <title>Pagina Principal POO</title>
     </head>
     <body>
         <div align ="center">
