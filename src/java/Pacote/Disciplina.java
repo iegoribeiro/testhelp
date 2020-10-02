@@ -57,8 +57,9 @@ public class Disciplina {
     public void setNota(Float nota) {
         this.nota = nota;
     }   
-    ArrayList disciplinas = new ArrayList();
     
-    
+   public ArrayList getList(){
+       
+   } 
    
 }
