@@ -19,32 +19,8 @@ TTG003	Trabalho de Graduação I
 <%@page import="Pacote.Disciplina"%>
 <%@include file="WEB-INF/menu.jspf" %>
 
-<% 
-    ArrayList<Disciplina> disciplinas = (ArrayList) application.getAttribute("disciplinas");
-    if(disciplinas == null){
-        disciplinas = new ArrayList();
-        disciplinas.add(new Disciplina("IAL205", "","4" )); 
-        disciplinas.add(new Disciplina("IBD002", "","4" )); 
-        disciplinas.add(new Disciplina("IES300", "", "4")); 
-        disciplinas.add(new Disciplina("ILP007", "", "4")); 
-        disciplinas.add(new Disciplina("ILP512", "", "4")); 
-        disciplinas.add(new Disciplina("ISO200", "", "4")); 
-        disciplinas.add(new Disciplina("TTG001", "", "4")); 
-        disciplinas.add(new Disciplina("TTG003", "", "4")); 
-        application.setAttribute("disciplinas", disciplinas);
-    
-    
-    for(int j=0; j<disciplinas.size(); j++){
-        disciplinas.get(j).setNota(Float.parseFloat("0.0"));
-    }
-    }
-    if(request.getParameter("enviar")!=null){
-        int t = Integer.parseInt(request.getParameter("indice"));
-        
-        disciplinas.get(t).setNota(Float.parseFloat(request.getParameter("nota")));
-    }
+<% ArrayList<Disciplina> disciplinas = (ArrayList) application.getAttribute("disciplinas"); %>
 
-%>
 <!DOCTYPE html>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">

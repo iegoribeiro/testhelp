@@ -6,7 +6,6 @@
 package Pacote;
 
 import java.util.ArrayList;
-import org.apache.catalina.core.ApplicationPart;
 
 /**
  *
@@ -16,14 +15,15 @@ public class Disciplina {
     private String nome;
     private String ementa;
     private String ciclo;
-    private Float nota;
-    ArrayList<Disciplina> modulo = new ArrayList();
-   
+    private Float nota;   
 
     public Disciplina(String nome, String ementa, String ciclo) {
         this.nome = nome;
         this.ementa = ementa;
         this.ciclo = ciclo;
+    }
+
+    public Disciplina() {
     }
 
     public String getCiclo() {
@@ -58,8 +58,15 @@ public class Disciplina {
         this.nota = nota;
     }   
     
-   public ArrayList getList(){
+   public ArrayList getList(ArrayList<Disciplina> dis){
        
+       ArrayList<String> list = new ArrayList<>();
+        
+       for (Disciplina disciplina : dis) {
+           list.add(disciplina.getNome());
+       }
+       
+       return list;
    } 
    
 }
